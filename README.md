@@ -7,12 +7,24 @@
 - B.S. of Science, Economics | Goethe Universität Frankfurt am Main (_May 2022_)
 
 ## Projects
-### Data-Driven EEG Band Discovery with Decision Trees
-[Publication](https://www.mdpi.com/1424-8220/22/8/3048)
+### 🌍 International Debt Analysis (SQL + PostgreSQL)
 
-Developed objective strategy for discovering optimal EEG bands based on signal power spectra using **Python**. This data-driven approach led to better characterization of the underlying power spectrum by identifying bands that outperformed the more commonly used band boundaries by a factor of two. The proposed method provides a fully automated and flexible approach to capturing key signal components and possibly discovering new indices of brain activity.
+This project uses **PostgreSQL and SQL** to explore international debt statistics from the **World Bank**. The goal is to analyze debt patterns across countries and over time.
 
-![EEG Band Discovery](/assets/img/eeg_band_discovery.jpeg)
+#### 🗂️ Contents
+- SQL queries: located in `/queries`
+- Data (sample): see `/data/cleaned_sample_data.csv`
+- Results: see `/results` for output summaries
+- Screenshots: proof of work & execution steps
+
+#### 📊 Sample Insights
+- Top 5 countries by debt in 2019
+- Number of distinct countries in the dataset
+- Afghanistan’s debt over 5 years
+
+#### 📥 Data Source
+- World Bank: [International Debt Statistics](https://databank.worldbank.org/source/international-debt-statistics)
+- License: [ODC-BY 1.0](https://opendatacommons.org/licenses/by/1.0/)
 
 ### Decoding Physical and Cognitive Impacts of Particulate Matter Concentrations at Ultra-Fine Scales
 [Publication](https://www.mdpi.com/1424-8220/22/11/4240)
