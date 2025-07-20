@@ -13,7 +13,7 @@ Technical Skills: Python, SQL, R
 
 ---
 
-## 🌍 1. International Debt Analysis (SQL + PostgreSQL)
+## 🌍 1. International Debt Analysis (PostgreSQL)
 
 Analyzes sovereign debt risk using World Bank International Debt Statistics. 
 **Measures**: 
