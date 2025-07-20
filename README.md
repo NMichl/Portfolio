@@ -73,7 +73,7 @@ Additonaly 7 other countries have Risk score = 2
 ## 📈 2. Trading Algorithm (R Master’s Thesis)
 
 Developed a bubble-detection trading strategy using:
-- **SADF (Supremum Augemneted Dickey Fuller)**
+- **SADF (Supremum Augmented Dickey Fuller)**
 - **CUSUM (Cumulative Sum)**
 
 ### Features
