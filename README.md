@@ -15,21 +15,27 @@ Technical Skills: Python, SQL, R
 
 ## 🌍 1. International Debt Analysis (SQL + PostgreSQL)
 
-Analyzes sovereign debt risk using World Bank International Debt Statistics.  
-Skills: real-world **data cleaning** and **SQL-based economic analysis**.
+Analyzes sovereign debt risk using World Bank International Debt Statistics. Using the debt Indicators below and also develope an own debt risk score (Debt-to-GNI > 60%, Debt per capita > $5000, Short-term debt > 30% of total external debt) which assign points for each sustainable debt goal failed (MAX 3). 
+Skills: Real-world **data cleaning** and **SQL-based economic analysis**.
 
 **Indicators Used:**
-External debt stocks: PNG, PPG, total, short-term
-Debt-to-GNI, per capita, export ratios
-
-### Data Source
+- "DT.DOD.DPNG.CD"	"External debt stocks private nonguaranteed (PNG) (DOD current US$)"
+- "DT.DOD.DECT.GN.ZS"	"External debt stocks (% of GNI)"
+- "DT.DOD.DPPG.CD"	"External debt stocks public and publicly guaranteed (PPG) (DOD current US$)"
+- "DT.DOD.DSTC.CD"	"External debt stocks short-term (DOD current US$)"
+- "DT.DOD.DECT.PC.CD"	"Total external debt per capita (US$)"
+- "DT.DOD.DECT.EX.ZS"	"External debt stocks (% of exports of goods services and primary income)"
+- "DT.DOD.DECT.CD"	"External debt stocks total (DOD current US$)"
+---
+### 🛠 Tools & Dataset
+- `pandas`, `numpy`, `chardet` * For data cleaning
+-  PostgreSQL as databse
 - [World Bank – International Debt Statistics](https://databank.worldbank.org/source/international-debt-statistics)
 
 ### 🗂️ Project Structure
-
 **`SQL/Data_Cleaning/`**
 `international_debt.csv` – Raw dataset
-[`world_bank_cleaning.py`](SQL/Data_Cleaning/world_bank_cleaning.py) – *Data cleaning with `pandas`, `numpy`, `chardet`*
+[`world_bank_cleaning.py`](SQL/Data_Cleaning/world_bank_cleaning.py) – * Data Cleaning 
 
 **`SQL/Queries/`**
 `creation_table_cleaning.sql` – Table setup + aggregates
@@ -38,46 +44,47 @@ Debt-to-GNI, per capita, export ratios
 
 **`SQL/Results/`**
 [`results_whole_analysis.ipynb`](SQL/Results/results_whole_analysis.ipynb) – *Final queries, visuals, and conclusions*
-
+---
 ### Data Preparation Highlights
-
 - Fixed encoding errors using `chardet`
-- Cleaned text from commas and removed invalid entries
+- Strips whitespace and removes special characters (e.g., commas, replace '..' with NA)
 - Reshaped data with `pandas.melt()` to long format for SQL analysis
+- Drops invalid or incomplete row
 - Exported UTF-8 cleaned CSV for PostgreSQL
 
-### Key Insights
-
+### Results
 - Analysis based on 2019 debt levels with some comparison to 2023 debt levels
-- **High-risk countries**: Mauritius, Dominica, Mongolia (264% debt-to-GNI), Montenegro (151%)
+- **High-risk countries**: Mauritius and Dominica (Risk score = 3) , Mongolia (264% debt-to-GNI) and Montenegro (151%) and (Risk score = 2). Also 7 other countries have Risk score = 2
 - **China**: High absolute debt, but moderate debt-to-GNI
-- **Private vs public debt** varies by country (e.g., Mozambique)
+- **Private vs public debt** Public debt dominates in most nations
 - **Improvement** noted in some countries, but debt imbalances persist
 
 ---
 
-## 🤖📈 Trading Algorithm (R Master’s Thesis)
+## 📈 Trading Algorithm (R Master’s Thesis)
 
 Developed a bubble-detection trading strategy using:
 - **SADF (Supremum Augemneted Dickey Fuller)**
 - **CUSUM (Cumulative Sum)**
 
-### 📌 Features
-- Identifies **explosive price behavior** and bubble crashes
+### Features
+- Identifies **explosive price behavior** and bubble crashes in a real time monitoring scenario
 - Implements **entry/exit timing rules**
 - Backtests strategy vs. passive benchmark
-- Calculates **CAPM, Sharpe Ratio, and returns**
+- Calculates **CAPM, Sharpe Ratio, and returns** 
+---
+### 🛠 Tools & Dataset
+`ggplot2`, `exuber` (SADF test), `yahoofinancer` (API for data), `dplyr`, `lubridate`, `PerformanceAnalytics`
 
 ### 🗂️ Project Structure
-
 **`R/Masterarbeit_code/`**
 - [`trading-algorithm.R`](R/Masterarbeit_code/trading-algorithm.R) – *All core logic: tests, monitoring, performance metrics*
 
 **`R/Masterarbeit_pdf/`**
 - [`masterarbeit.pdf`](R/Masterarbeit_code/trading-algorithm.R) – *Full thesis document*
-
-### 📈 Results
-
+---
+###  Results
+- Generate consistent positive returns
 - Outperforms benchmark in volatile markets
 - Adapts to macro regime shifts
 - Maintains strong Sharpe ratio (risk-adjusted returns)
@@ -88,42 +95,34 @@ Developed a bubble-detection trading strategy using:
 ## 📱 Google Play Store App Success Analysis (Python !! Not completed)
 
 **Goal:** Understand what contributes to an app's success on the Google Play Store, defined by:
-- 📈 High Install Count
-- ⭐ High User Ratings
-
+- High Install Count
+- High User Ratings
 ---
-
-### 🛠️ Tools & Dataset
-
-- Python, pandas, matplotlib, seaborn
+### 🛠 Tools & Dataset
+- `Python`, `pandas`, `matplotlib`, `seaborn`
 - Dataset: [Google Play Store Apps (2018)](https://github.com/schlende/practical-pandas-projects/blob/master/datasets/google-play-store-11-2018.csv)
-
 ---
-
 ### 📊 Key Analyses
 
-### 1. Ratings vs Popularity
+#### 1. Ratings vs Popularity
 - Apps grouped by install count: `0–100k`, `100k–1M`, `>1M`
 - Average star ratings are similar across groups (~4.3)
 - Higher installs → much higher review volume
 > Popular apps don't get better ratings, just more visibility and more reviews.
 
----
-
-### 2. Genre-Based Trends
+#### 2. Genre-Based Trends
 - Compared genres by:
   - Total installs
   - Average rating
   - Number of apps
 > No single genre leads across all three metrics — quantity ≠ quality ≠ popularity.
-
 ---
-
-### ✅ Conclusion
+### Results
 
 App **success** is driven by visibility more than rating quality.  
 **Genres** perform differently depending on metric — top-performing genres in installs aren't always top-rated.
 
+---
 
 ## 🧾 SEC 13F Filing Data Extractor (Automation)
 
@@ -134,26 +133,20 @@ Extract and analyze institutional investment data from SEC **13F-HR filings**, u
 
 ### ⚙️ What This Script Does
 
-- ✅ Converts stock tickers (e.g., `BRK.B`) into **CIK numbers** from the SEC database
-- ✅ Downloads recent **13F-HR filings** for the company using the EDGAR system
-- ✅ Parses **XML filings** with `BeautifulSoup`
-- ✅ Extracts key data: company name, CUSIP, shares held, value, etc.
-- ✅ Merges filings into one DataFrame and saves it as a **CSV**
+-  Converts stock tickers (e.g., `BRK.B`) into **CIK numbers** from the SEC database
+-  Downloads recent **13F-HR filings** for the company using the EDGAR system
+-  Parses **XML filings** with `BeautifulSoup`
+-  Extracts key data: company name, CUSIP, shares held, value, etc.
+-  Merges filings into one DataFrame and saves it as a **CSV**
 
 ---
 
-### 📦 Tools Used
-
-- `pandas`
-- `requests`
-- `beautifulsoup4`
-- `edgar` (Python SEC wrapper)
-- `html5lib` (parser dependency)
+### 🛠 Tools
+`pandas`, `requests`, `beautifulsoup4`,  `edgar` (Python SEC wrapper),  `html5lib` (parser dependency)
 
 ---
 
-### 🧪 Example Use
-
+###  Example Use
 You’ll be prompted to:
 1. Enter your email for SEC access headers
 2. Input the CIK of the institution
