@@ -128,7 +128,7 @@ Developed a bubble-detection trading strategy using:
 > Popular apps don't get better ratings, just more visibility and more reviews.
 
 #### 2. Genre-Based Trends
-- Compared genres by:
+Compared genres by:
   - Total installs
   - Average rating
   - Number of apps
