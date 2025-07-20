@@ -1,6 +1,6 @@
 # Portfolio
 
-# Technical Skills: Python, SQL, R
+Technical Skills: Python, SQL, R
 
 # 🎓 Education
 
@@ -11,42 +11,44 @@
 
 # 📁 Projects
 
-## 🌍 International Debt Analysis (SQL + PostgreSQL)
+---
+
+## 🌍 1. International Debt Analysis (SQL + PostgreSQL)
 
 Analyzes sovereign debt risk using World Bank International Debt Statistics.  
-Focus: real-world **data cleaning** and **SQL-based economic analysis**.
+Skills: real-world **data cleaning** and **SQL-based economic analysis**.
 
 **Indicators Used:**
-- External debt stocks: PNG, PPG, total, short-term
-- Debt-to-GNI, per capita, export ratios
+External debt stocks: PNG, PPG, total, short-term
+Debt-to-GNI, per capita, export ratios
 
-### 📥 Data Source
+### Data Source
 - [World Bank – International Debt Statistics](https://databank.worldbank.org/source/international-debt-statistics)
 
 ### 🗂️ Project Structure
 
 **`SQL/Data_Cleaning/`**
-- `international_debt.csv` – Raw dataset
-- [`world_bank_cleaning.py`](SQL/Data_Cleaning/world_bank_cleaning.py) – *Data cleaning with `pandas`, `numpy`, `chardet`*
+`international_debt.csv` – Raw dataset
+[`world_bank_cleaning.py`](SQL/Data_Cleaning/world_bank_cleaning.py) – *Data cleaning with `pandas`, `numpy`, `chardet`*
 
 **`SQL/Queries/`**
-- `creation_table_cleaning.sql` – Table setup + aggregates
-- `basic_exploration.sql` – Initial structure queries
-- `advanced_analysis.sql` – Deep dive into debt risk metrics
+`creation_table_cleaning.sql` – Table setup + aggregates
+`basic_exploration.sql` – Initial structure queries
+`advanced_analysis.sql` – Deep dive into debt risk metrics
 
 **`SQL/Results/`**
-- [`results_whole_analysis.ipynb`](SQL/Results/results_whole_analysis.ipynb) – *Final queries, visuals, and conclusions*
+[`results_whole_analysis.ipynb`](SQL/Results/results_whole_analysis.ipynb) – *Final queries, visuals, and conclusions*
 
-### 🧹 Data Preparation Highlights
+### Data Preparation Highlights
 
 - Fixed encoding errors using `chardet`
-- Cleaned text and removed invalid entries
-- Reshaped data with `pandas.melt()` for SQL analysis
+- Cleaned text from commas and removed invalid entries
+- Reshaped data with `pandas.melt()` to long format for SQL analysis
 - Exported UTF-8 cleaned CSV for PostgreSQL
 
-### 📌 Key Insights
+### Key Insights
 
-- Analysis based on 2019 debt levels with some comparison to 2023
+- Analysis based on 2019 debt levels with some comparison to 2023 debt levels
 - **High-risk countries**: Mauritius, Dominica, Mongolia (264% debt-to-GNI), Montenegro (151%)
 - **China**: High absolute debt, but moderate debt-to-GNI
 - **Private vs public debt** varies by country (e.g., Mozambique)
@@ -57,8 +59,8 @@ Focus: real-world **data cleaning** and **SQL-based economic analysis**.
 ## 🤖📈 Trading Algorithm (R Master’s Thesis)
 
 Developed a bubble-detection trading strategy using:
-- **SADF (Supremum ADF)**
-- **CUSUM structural break tests**
+- **SADF (Supremum Augemneted Dickey Fuller)**
+- **CUSUM (Cumulative Sum)**
 
 ### 📌 Features
 - Identifies **explosive price behavior** and bubble crashes
