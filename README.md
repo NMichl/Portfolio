@@ -4,7 +4,7 @@ Technical Skills: Python, SQL, R
 
 # Education
 
-- **M.Sc. Economics** — Universität zu Köln _(Expected: May 2025)_
+- **M.Sc. Economics** — Universität zu Köln _(May 2025)_
 - **B.Sc. Economics** — Goethe Universität Frankfurt am Main _(May 2022)_
 
 ---
