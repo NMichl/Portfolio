@@ -131,9 +131,9 @@ Analyzes macroeconomic indicators from the World Bank to model and forecast unem
 ### 🗂️ Project Structure
 
 **`Python/predicting_unemployment`**
- [`import_data_api.ipynb`](https://github.com/NMichl/Portfolio/blob/main/Python/predicting_unemployment/import_data_api.ipynb) - *Collecting data with Api*
+ - [`import_data_api.ipynb`](https://github.com/NMichl/Portfolio/blob/main/Python/predicting_unemployment/import_data_api.ipynb) 
  – Collects raw macro indicators via World Bank API, reshapes into tidy panel, and exports cleaned dataset
- [`cleaning_and_model.ipynb`](https://github.com/NMichl/Portfolio/blob/main/Python/predicting_unemployment/cleaning_and_model.ipynb)
+ - [`cleaning_and_model.ipynb`](https://github.com/NMichl/Portfolio/blob/main/Python/predicting_unemployment/cleaning_and_model.ipynb)
  – Missing data diagnostics, hierarchical imputation, lag feature engineering, PCA, and machine learning models (Linear Regression, KNN, Random Forest)
 
 ---
