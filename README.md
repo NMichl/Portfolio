@@ -95,10 +95,10 @@ Developed a bubble-detection trading strategy using:
 
 ### 🗂️ Project Structure
 **`R/Masterarbeit_code/`**
-- [`trading-algorithm.R`](https://github.com/NMichl/Portfolio/blob/main/R/Masterarbeit_code/trading-algorithm.R) – *All core logic: tests, monitoring, performance metrics*
+- [`trading-algorithm.R`](https://github.com/NMichl/Portfolio/blob/main/R/Masterarbeit_code/Trading_algorithm.R) – *All core logic: tests, monitoring, performance metrics*
 
 **`R/Masterarbeit_pdf/`**
-- [`masterarbeit.pdf`](https://github.com/NMichl/Portfolio/blob/main/R/Masterarbeit_code/trading-algorithm.R) – *Full thesis document*
+- [`masterarbeit.pdf`](https://github.com/NMichl/Portfolio/blob/main/R/Masterarbeit_pdf/masterarbeit.pdf) – *Full thesis document*
   
 ---
 
