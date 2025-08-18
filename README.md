@@ -43,7 +43,7 @@ Analyzes sovereign debt risk using World Bank International Debt Statistics.
 ### 🗂️ Project Structure
 **`SQL/Data_Cleaning/`**
 `international_debt.csv` – Raw dataset
-[`world_bank_cleaning.py`](https://github.com/NMichl/Portfolio/blob/main/SQL/Data_Cleaning/world_bank_cleaning.py) –  Data Cleaning 
+[`world_bank_cleaning.py`](https://github.com/NMichl/Portfolio/blob/main/SQL/data_cleaning/world_bank_cleaning.py) –  Data Cleaning 
 
 **`SQL/Queries/`**
 `creation_table_cleaning.sql`- Cleaning
@@ -51,7 +51,7 @@ Analyzes sovereign debt risk using World Bank International Debt Statistics.
 `advanced_analysis.sql` – Deep dive into debt risk metrics
 
 **`SQL/Results/`**
-[`results_whole_analysis.ipynb`](https://github.com/NMichl/Portfolio/blob/main/SQL/Results/results_whole_analysis.ipynb) – *Final queries, visuals, and conclusions*
+[`results_whole_analysis.ipynb`](https://github.com/NMichl/Portfolio/blob/main/SQL/results/results_whole_analysis.ipynb) – *Final queries, visuals, and conclusions*
 
 ---
 
@@ -118,19 +118,25 @@ Analyzes macroeconomic indicators from the World Bank to model and forecast unem
 - Hierarchical imputation (country trends → subgroup medians → global fallback)
 - Skills: Real-world time-series preparation, hierarchical imputation, and machine learning forecasting with cross-validation.
 
+---
+
 ### 🛠 Tools & Dataset
 - `wbgapi` - Api World Bank
 - `pandas`, `numpy`, `matplotlib`, `seaborn` — cleaning & visualization
 - `scikit-learn` - Machine learning
 - Data: World Bank Open Data — macroeconomic indicators
 
+---
+
 ### 🗂️ Project Structure
 
 **`Python/predicting_unemployment`**
- [`import_data_api.ipynb`](Python/predicting_unemployment/import_data_api.ipynb) - *Collecting data with Api*
+ [`import_data_api.ipynb`](https://github.com/NMichl/Portfolio/blob/main/Python/predicting_unemployment/import_data_api.ipynb) - *Collecting data with Api*
  – Collects raw macro indicators via World Bank API, reshapes into tidy panel, and exports cleaned dataset
- [`cleaning_and_model.ipynb`](Python/predicting_unemployment/cleaning_and_model.ipynb)
+ [`cleaning_and_model.ipynb`](https://github.com/NMichl/Portfolio/blob/main/Python/predicting_unemployment/cleaning_and_model.ipynb)
  – Missing data diagnostics, hierarchical imputation, lag feature engineering, PCA, and machine learning models (Linear Regression, KNN, Random Forest)
+
+---
 
 ### Data Preparation Highlights
 - Restricted window to 1991 onward (availability of unemployment data)
@@ -153,6 +159,7 @@ Analyzes macroeconomic indicators from the World Bank to model and forecast unem
 
 **Goal:**  
 Extract and analyze institutional investment data from SEC **13F-HR filings**, using company CIKs or ticker symbols.
+- [`13F_Automated.py`](https://github.com/NMichl/Portfolio/blob/main/Python/13F_filings_automation/13F_Automated.py)
 
 ---
 
