@@ -4,7 +4,7 @@ Technical Skills: Python, SQL, R
 
 # Education
 
-- **M.Sc. Economics** — Universität zu Köln _(May 2025)_
+- **M.Sc. Economics** — Universität zu Köln _(July 2025)_
 - **B.Sc. Economics** — Goethe Universität Frankfurt am Main _(May 2022)_
 
 ---
@@ -18,8 +18,11 @@ Technical Skills: Python, SQL, R
 Analyzes sovereign debt risk using World Bank International Debt Statistics. 
 **Measures**: 
 - Debt Indicators (below)
-- Own developed debt risk score (Debt-to-GNI > 60%, Debt per capita > $5000, Short-term debt > 30% of total external debt) which assign points for each sustainable debt goal failed (MAX 3). 
-**Skills**: Real-world **data cleaning** and **SQL-based economic analysis**.
+- Own developed debt risk score (assign points for each sustainable debt goal failed (MAX 3)
+  - Debt-to-GNI > 60%
+  - Debt per capita > $5000
+  - Short-term debt > 30% of total external debt 
+- **Skills**: Real-world **data cleaning** and **SQL-based economic analysis**.
 
 **Debt Indicators:**
 - "DT.DOD.DPNG.CD"	"External debt stocks private nonguaranteed (PNG) (DOD current US$)"
@@ -40,7 +43,7 @@ Analyzes sovereign debt risk using World Bank International Debt Statistics.
 ### 🗂️ Project Structure
 **`SQL/Data_Cleaning/`**
 `international_debt.csv` – Raw dataset
-[`world_bank_cleaning.py`](SQL/Data_Cleaning/world_bank_cleaning.py) –  Data Cleaning 
+[`world_bank_cleaning.py`](https://github.com/NMichl/Portfolio/blob/main/SQL/Data_Cleaning/world_bank_cleaning.py) –  Data Cleaning 
 
 **`SQL/Queries/`**
 `creation_table_cleaning.sql`- Cleaning
@@ -48,7 +51,7 @@ Analyzes sovereign debt risk using World Bank International Debt Statistics.
 `advanced_analysis.sql` – Deep dive into debt risk metrics
 
 **`SQL/Results/`**
-[`results_whole_analysis.ipynb`](SQL/Results/results_whole_analysis.ipynb) – *Final queries, visuals, and conclusions*
+[`results_whole_analysis.ipynb`](https://github.com/NMichl/Portfolio/blob/main/SQL/Results/results_whole_analysis.ipynb) – *Final queries, visuals, and conclusions*
 
 ---
 
@@ -60,13 +63,13 @@ Analyzes sovereign debt risk using World Bank International Debt Statistics.
 - Exported UTF-8 cleaned CSV for PostgreSQL
 
 ### Results  
-Analysis based on 2019 debt, with some comparison to 2023  
-**High-risk countries**: Mauritius and Dominica (Risk score = 3)  
-Mongolia (264% debt-to-GNI) and Montenegro (151%) and (Risk score = 2).  
-Additonaly 7 other countries have Risk score = 2  
-**China**: High absolute debt, but moderate debt-to-GNI  
-**Private vs public debt** Public debt dominates in most nations  
-**Improvement** noted in some countries, but debt imbalances persist  
+- Analysis based on 2019 debt, with some comparison to 2023  
+- **High-risk countries**: Mauritius and Dominica (Risk score = 3)  
+  - Mongolia (264% debt-to-GNI) and Montenegro (151%) and (Risk score = 2).  
+  - Additonaly 7 other countries have Risk score = 2  
+- **China**: High absolute debt, but moderate debt-to-GNI  
+- **Private vs public debt** Public debt dominates in most nations  
+- **Improvement** noted in some countries, but debt imbalances persist  
 
 ---
 
@@ -77,22 +80,25 @@ Developed a bubble-detection trading strategy using:
 - **CUSUM (Cumulative Sum)**
 
 ### Features
-- Identifies **explosive price behavior** and bubble crashes in a real time monitoring scenario
-- Implements **entry/exit timing rules**
+- Identifies explosive price behavior and bubble crashes in a real time monitoring scenario
+- Implements entry/exit timing rules
 - Backtests strategy vs. passive benchmark
-- Calculates **CAPM, Sharpe Ratio, and returns**
+- Calculates CAPM, Sharpe Ratio, and returns
   
 ---
 
 ### 🛠 Tools & Dataset
-`ggplot2`, `exuber` (SADF test), `yahoofinancer` (API for data), `dplyr`, `lubridate`, `PerformanceAnalytics`
+- `ggplot2` - Plotting
+- `exuber` - SADF test
+- `yahoofinancer` - API for data
+- `dplyr`, `lubridate`, `PerformanceAnalytics` - Data manipulation
 
 ### 🗂️ Project Structure
 **`R/Masterarbeit_code/`**
-- [`trading-algorithm.R`](R/Masterarbeit_code/trading-algorithm.R) – *All core logic: tests, monitoring, performance metrics*
+- [`trading-algorithm.R`](https://github.com/NMichl/Portfolio/blob/main/R/Masterarbeit_code/trading-algorithm.R) – *All core logic: tests, monitoring, performance metrics*
 
 **`R/Masterarbeit_pdf/`**
-- [`masterarbeit.pdf`](R/Masterarbeit_code/trading-algorithm.R) – *Full thesis document*
+- [`masterarbeit.pdf`](https://github.com/NMichl/Portfolio/blob/main/R/Masterarbeit_code/trading-algorithm.R) – *Full thesis document*
   
 ---
 
@@ -152,11 +158,11 @@ Extract and analyze institutional investment data from SEC **13F-HR filings**, u
 
 ### ⚙️ What This Script Does
 
--  Converts stock tickers (e.g., `BRK.B`) into **CIK numbers** from the SEC database
--  Downloads recent **13F-HR filings** for the company using the EDGAR system
--  Parses **XML filings** with `BeautifulSoup`
+-  Converts stock tickers (e.g., `BRK.B`) into CIK numbers from the SEC database
+-  Downloads recent 13F-HR filings for the company using the EDGAR system
+-  Parses XML filings with `BeautifulSoup`
 -  Extracts key data: company name, CUSIP, shares held, value, etc.
--  Merges filings into one DataFrame and saves it as a **CSV**
+-  Merges filings into one DataFrame and saves it as a CSV
 
 ---
 
