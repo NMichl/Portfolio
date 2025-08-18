@@ -121,8 +121,10 @@ Analyzes macroeconomic indicators from the World Bank to model and forecast unem
 ### 🗂️ Project Structure
 
 **`Python/predicting_unemployment`**
-`import_data_api.py` – Collects raw macro indicators via World Bank API, reshapes into tidy panel, and exports cleaned dataset
-`cleaning_and_model.ipynb` – Missing data diagnostics, hierarchical imputation, lag feature engineering, PCA, and machine learning models (Linear Regression, KNN, Random Forest)
+ [`import_data_api.ipynb`](Python/predicting_unemployment/import_data_api.ipynb) - *Collecting data with Api*
+ – Collects raw macro indicators via World Bank API, reshapes into tidy panel, and exports cleaned dataset
+ [`cleaning_and_model.ipynb`](Python/predicting_unemployment/cleaning_and_model.ipynb)
+ – Missing data diagnostics, hierarchical imputation, lag feature engineering, PCA, and machine learning models (Linear Regression, KNN, Random Forest)
 
 ### Data Preparation Highlights
 - Restricted window to 1991 onward (availability of unemployment data)
