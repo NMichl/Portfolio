@@ -51,7 +51,7 @@ Analyzes sovereign debt risk using World Bank International Debt Statistics.
 `advanced_analysis.sql` – Deep dive into debt risk metrics
 
 **`SQL/Results/`**
-[`results_whole_analysis.ipynb`](https://github.com/NMichl/Portfolio/blob/main/SQL/results/results_whole_analysis.ipynb) – *Final queries, visuals, and conclusions*
+[`results_whole_analysis.ipynb`](https://github.com/NMichl/Portfolio/blob/main/SQL/Results/results_whole_analysis.ipynb) – *Final queries, visuals, and conclusions*
 
 ---
 
