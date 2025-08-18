@@ -103,9 +103,76 @@ Developed a bubble-detection trading strategy using:
 - Maintains strong Sharpe ratio (risk-adjusted returns)
 
 ---
+## 3. Unemployment Forecasting (Python, scikit-learn)
+
+Analyzes macroeconomic indicators from the World Bank to model and forecast unemployment rates across countries.
+
+**Focus:**
+- Time-series forecasting with lagged predictors (1-, 2-, and 4-year lags)
+- Hierarchical imputation (country trends → subgroup medians → global fallback)
+- Skills: Real-world time-series preparation, hierarchical imputation, and machine learning forecasting with cross-validation.
+
+### 🛠 Tools & Dataset
+- `wbgapi` - Api World Bank
+- `pandas`, `numpy`, `matplotlib`, `seaborn` — cleaning & visualization
+- `scikit-learn` - Machine learning
+- Data: World Bank Open Data — macroeconomic indicators
+
+### 🗂️ Project Structure
+
+**`Python/predicting_unemployment`**
+`import_data_api.py` – Collects raw macro indicators via World Bank API, reshapes into tidy panel, and exports cleaned dataset
+`cleaning_and_model.ipynb` – Missing data diagnostics, hierarchical imputation, lag feature engineering, PCA, and machine learning models (Linear Regression, KNN, Random Forest)
+
+### Data Preparation Highlights
+- Restricted window to 1991 onward (availability of unemployment data)
+- Dropped countries with insufficient target coverage
+- Deleated features with >30% missingness
+- Created lagged features for persistence and delayed effects
+- Applied region × income subgroup imputations before fallback to global stats
+
+### Results
+- Linear Regression — RMSE: 2.393, R²: 0.678, MAE: 1.541
+- KNN Regression — RMSE: 2.858, R²: 0.677, MAE: 2.175
+- Random Forest Regression — RMSE: 2.584, R²: 0.717, MAE: 1.904
+- Good R² values (>0.65) across all models indicate strong explanatory power for macroeconomic forecasting.
+- Linear Regression is most accurate on average errors, while Random Forest balances accuracy with higher explanatory strength.
+- **Of course further hyperparamter tuning needs to be done to get more reliable results**
+
+---
+
+## 🧾 4. SEC 13F Filing Data Extractor (Automation)
+
+**Goal:**  
+Extract and analyze institutional investment data from SEC **13F-HR filings**, using company CIKs or ticker symbols.
+
+---
+
+### ⚙️ What This Script Does
+
+-  Converts stock tickers (e.g., `BRK.B`) into **CIK numbers** from the SEC database
+-  Downloads recent **13F-HR filings** for the company using the EDGAR system
+-  Parses **XML filings** with `BeautifulSoup`
+-  Extracts key data: company name, CUSIP, shares held, value, etc.
+-  Merges filings into one DataFrame and saves it as a **CSV**
+
+---
+
+### 🛠 Tools
+`pandas`, `requests`, `beautifulsoup4`,  `edgar` (Python SEC wrapper),  `html5lib` (parser dependency)
+
+---
+
+###  Example Use
+You’ll be prompted to:
+1. Enter your email for SEC access headers
+2. Input the CIK of the institution
+3. Set a local path + filename for output
+
+---
 
 
-## 📱 3. App Success Analysis (Python: Not completed !!)
+## 📱 5. App Success Analysis (Python: Not completed !!)
 
 **Goal:** Understand what contributes to an app's success on the Google Play Store, defined by:
 - High Install Count
@@ -141,34 +208,4 @@ App success is driven by visibility more than rating quality.
 Genres perform differently depending on metric — top-performing genres in installs aren't always top-rated.
 
 ---
-
-## 🧾 SEC 13F Filing Data Extractor (Automation)
-
-**Goal:**  
-Extract and analyze institutional investment data from SEC **13F-HR filings**, using company CIKs or ticker symbols.
-
----
-
-### ⚙️ What This Script Does
-
--  Converts stock tickers (e.g., `BRK.B`) into **CIK numbers** from the SEC database
--  Downloads recent **13F-HR filings** for the company using the EDGAR system
--  Parses **XML filings** with `BeautifulSoup`
--  Extracts key data: company name, CUSIP, shares held, value, etc.
--  Merges filings into one DataFrame and saves it as a **CSV**
-
----
-
-### 🛠 Tools
-`pandas`, `requests`, `beautifulsoup4`,  `edgar` (Python SEC wrapper),  `html5lib` (parser dependency)
-
----
-
-###  Example Use
-You’ll be prompted to:
-1. Enter your email for SEC access headers
-2. Input the CIK of the institution
-3. Set a local path + filename for output
-
-
 
