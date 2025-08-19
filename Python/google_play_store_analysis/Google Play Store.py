@@ -179,48 +179,8 @@ plt.show()
 
 
 
-mean_score = genre_stats["average_score"].mean()
-median_installs = genre_stats["min_installs"].median()
-
-underrated = genre_stats[(genre_stats["average_score"] > mean_score) & (genre_stats["min_installs"] < median_installs)]
-
-
-
-plt.figure(figsize=(12, 6))
-sns.scatterplot(data=genre_stats, x="min_installs", y="average_score", size="number_of_apps", hue="average_score", legend=False,)
-plt.title("Average Rating vs. Total Installs per Genre")
-plt.xlabel("Total Installs")
-plt.ylabel("Average Rating")
-plt.xscale("log")
-plt.axhline(mean_score, color='gray', linestyle='--', label = "Mean Score")
-plt.axvline(median_installs, color='gray', linestyle='--', label = "Median Installs")
-
-for genre, row in underrated.iterrows():
-    plt.text(row["min_installs"], row["average_score"], genre, fontsize=5)
-
-plt.title("Underrated Genres: High Score, Low Installs")
-plt.xlabel("Total Installs (log scale)")
-plt.ylabel("Average Score")
-plt.legend()
-plt.tight_layout()
-plt.grid(True)
-plt.show()
-
-# -----------------------------------------------------------
-# 📊 SECTION: App Popularity Analysis by Genre
-# -----------------------------------------------------------
-revenue_data = data_google_play[[ 'min_installs', 'offers_iap', 'ad_supported', 'price', 'score']].copy()
-revenue_data["min_revenue"] = revenue_data["min_installs"]* revenue_data["price"]
-print(revenue_data.sort_values("min_revenue", ascending = False)
-print(revenue_data.info())
 
 
 
 
-# Jupyter notebook findings
-# usefully to have ordered categorial data so we can simply filter them like numeric values
-# filtered_df = ds_jobs_transformed[
-#     (ds_jobs_transformed['experience'] >= '10') &
-#     (ds_jobs_transformed['company_size'] >= '1000-4999')
-# ]
-# print(ds_jobs_transformed['relevant_experience'].unique()) = Array with all unqiue values displayed
+
