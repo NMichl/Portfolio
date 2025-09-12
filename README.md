@@ -209,13 +209,13 @@ This project quantifies who net sold/bought what among major investment firms—
 
 ### 🗂️ Project Structure
 **`Power bi/`**
-- [`Euqity_shifts_Investmentfirms.pbix`](https://github.com/NMichl/Portfolio/Power bi/Euqity_shifts_Investmentfirms.pbix) – *All core logic: tests, monitoring, performance metrics*
+- [`Euqity_shifts_Investmentfirms.pbix`](https://github.com/NMichl/Portfolio/blob/main/Power bi/Euqity_shifts_Investmentfirms.pbix) – *Power BI Analysis
 
 - **`Power bi/`**
-- [`Power bi/13F_Automation_extended.py`](https://github.com/NMichl/Portfolio/Power bi/Power bi/13F_Automation_extended.py)
+- [`Power bi/13F_Automation_extended.py`](https://github.com/NMichl/Portfolio/blob/main/Power bi/Power bi/13F_Automation_extended.py)- *Get data
 
 - **`Power bi/`**
-- [`Raw_data_to_star_schema.py`](https://github.com/NMichl/Portfolio/Power bi/Raw_data_to_star_schema.py)
+- [`Raw_data_to_star_schema.py`](https://github.com/NMichl/Portfolio/blob/main/Power bi/Raw_data_to_star_schema.py) - *Transform data
 
 ---
 
@@ -240,6 +240,7 @@ This project quantifies who net sold/bought what among major investment firms—
   - Bought by 7 firms of 7: SiriusXM Holdings
   - Bought by 6 firms of 7: Arista Networks, Broadcom, Nvidia, Lam Research, GE Vernova and many more.
   - Largest net value increase: Nvidia, Broadcom, Walmart, GE Vernova
+  
 ---
 
 ## 📱 6. App Success Analysis (Python: Not completed !!)
