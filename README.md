@@ -209,13 +209,13 @@ This project quantifies who net sold/bought what among major investment firms—
 
 ### 🗂️ Project Structure
 **`Power bi/`**
-- [`Euqity_shifts_Investmentfirms.pbix`](https://github.com/NMichl/Portfolio/blob/main/Power bi/Euqity_shifts_Investmentfirms.pbix) – *Power BI Analysis
+- [`Euqity_shifts_Investmentfirms.pbix`](https://github.com/NMichl/Portfolio/blob/main/Power_bi/Euqity_shifts_Investmentfirms.pbix) – *Power BI Analysis
 
 - **`Power bi/`**
-- [`Power bi/13F_Automation_extended.py`](https://github.com/NMichl/Portfolio/blob/main/Power bi/Power bi/13F_Automation_extended.py)- *Get data
+- [`Power bi/13F_Automation_extended.py`](https://github.com/NMichl/Portfolio/blob/main/Power_bi/13F_Automation_extended.py)- *Get data
 
 - **`Power bi/`**
-- [`Raw_data_to_star_schema.py`](https://github.com/NMichl/Portfolio/blob/main/Power bi/Raw_data_to_star_schema.py) - *Transform data
+- [`Raw_data_to_star_schema.py`](https://github.com/NMichl/Portfolio/blob/main/Power_bi/Raw_data_to_star_schema.py) - *Transform data
 
 ---
 
