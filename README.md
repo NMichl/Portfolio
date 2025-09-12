@@ -190,7 +190,7 @@ You’ll be prompted to:
 3. Set a local path + filename for output
 
 ---
-## 5. SEC-13filings Power BI Analysis
+## 5. SEC-13F-Filings Power BI Analysis
 
 This project quantifies who net sold/bought what among major investment firms—separating trading (shares) from price moves (value)—for 2023Q4–2025Q2 (Equity only). 
 
