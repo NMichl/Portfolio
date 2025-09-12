@@ -175,7 +175,11 @@ Extract and analyze institutional investment data from SEC **13F-HR filings**, u
 ---
 
 ### 🛠 Tools
-`pandas`, `requests`, `beautifulsoup4`,  `edgar` (Python SEC wrapper),  `html5lib` (parser dependency)
+- `pandas` — dataframes / manipulation
+- `requests` — HTTP client
+- `beautifulsoup4` — HTML parsing
+- `edgar` — SEC filings wrapper
+- `html5lib` — HTML parser engine
 
 ---
 
@@ -186,9 +190,59 @@ You’ll be prompted to:
 3. Set a local path + filename for output
 
 ---
+## 5. SEC-13filings Power BI Analysis
 
+This project quantifies who net sold/bought what among major investment firms—separating trading (shares) from price moves (value)—for 2023Q4–2025Q2 (Equity only). 
 
-## 📱 5. App Success Analysis (Python: Not completed !!)
+- **Pages**
+  - The Overall Development page gives multi-year context of total shares and value with start/end KPIs and the shaded focus window.
+  - Top Sells per Firm is a deep-dive: pick a firm to see its top holdings through the window, the largest reductions in shares and value, and a QoQ value waterfall for context.
+  - Top Sells across Firms ranks the securities with the most net shares sold across all investment firms and also shows each name’s net value change (plus how many firms sold it and a total of net shares sold for the Top-N).
+  - Top Buys across Firms mirrors this for the most net shares bought and their net value increase.
+ 
+
+- Data is loaded in the pbix, so the Python script don't need to be run to have the data.
+- Script "13F_Automation_extended" is used to get form the SEC the 13-Fillings quarterly explaining changes in the security investments.
+- Script "Raw_data_to_star_schema" summarizes the csv of the different Investmentfirms and dispatches them in different csv building a star schema. 
+  
+---
+
+### 🗂️ Project Structure
+**`Power bi/`**
+- [`Euqity_shifts_Investmentfirms.pbix`](https://github.com/NMichl/Portfolio/Power bi/Euqity_shifts_Investmentfirms.pbix) – *All core logic: tests, monitoring, performance metrics*
+
+- **`Power bi/`**
+- [`Power bi/13F_Automation_extended.py`](https://github.com/NMichl/Portfolio/Power bi/Power bi/13F_Automation_extended.py)
+
+- **`Power bi/`**
+- [`Raw_data_to_star_schema.py`](https://github.com/NMichl/Portfolio/Power bi/Raw_data_to_star_schema.py)
+
+---
+
+### 🛠 Tools & Dataset
+- `pandas` — dataframes / manipulation
+- `requests` — HTTP client
+- `beautifulsoup4` — HTML parsing
+- `edgar` — SEC filings wrapper
+- `html5lib` — HTML parser engine
+- `os` — filesystem utilities
+- `glob` — filename pattern matching
+
+---
+### Insights
+- Between 2023 Q4 and 2025 Q2, Total shares fell ≈ 29% while total value declined only ≈ 15 %)
+  - To realiably identify the reason for the mismatch betweeen shares sould and value decline additonal Investigation need to be made, two potentials Theories are named in the .pbix
+- Top sells across firms (net basis): card shows ~13.74bn shares net sold for the Top selection.
+  - Sold by 6 firms of 7: Ginkgo Bioworks, Southwestern Energy, Vale S.A., Wells Fargo & Co.
+  - Sold by 5 firms of 7: Apple, Bank of America, Coca-Cola, Exxon Mobil
+  - Top decline in value orderd from most to least: Apple, Microsoft, Alphabet, Intel, Exxon Mobil
+- Top buys across firms (net basis): card shows ~9.64bn shares net bought for the Top selection.
+  - Bought by 7 firms of 7: SiriusXM Holdings
+  - Bought by 6 firms of 7: Arista Networks, Broadcom, Nvidia, Lam Research, GE Vernova and many more.
+  - Largest net value increase: Nvidia, Broadcom, Walmart, GE Vernova
+---
+
+## 📱 6. App Success Analysis (Python: Not completed !!)
 
 **Goal:** Understand what contributes to an app's success on the Google Play Store, defined by:
 - High Install Count
