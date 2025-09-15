@@ -1,0 +1,114 @@
+{
+  "file": "R/Masterarbeit_code/Trading_algorithm.R",
+  "total_lines": 891,
+  "library_calls": [
+    "ggplot2",
+    "exuber",
+    "PerformanceAnalytics",
+    "yahoofinancer",
+    "dplyr",
+    "lubridate",
+    "stats"
+  ],
+  "function_count": 12,
+  "functions": [
+    {
+      "name": "Get_data_and_save",
+      "start_line": 19,
+      "end_line": 24,
+      "length": 6,
+      "loops": 0,
+      "branches": 0
+    },
+    {
+      "name": "load_stock",
+      "start_line": 29,
+      "end_line": 39,
+      "length": 11,
+      "loops": 0,
+      "branches": 0
+    },
+    {
+      "name": "plot_bubble_testing",
+      "start_line": 158,
+      "end_line": 174,
+      "length": 17,
+      "loops": 0,
+      "branches": 0
+    },
+    {
+      "name": "real_time_monitoring",
+      "start_line": 345,
+      "end_line": 382,
+      "length": 38,
+      "loops": 1,
+      "branches": 2
+    },
+    {
+      "name": "cusum_monitoring",
+      "start_line": 388,
+      "end_line": 439,
+      "length": 52,
+      "loops": 1,
+      "branches": 0
+    },
+    {
+      "name": "plot_statistic",
+      "start_line": 443,
+      "end_line": 457,
+      "length": 15,
+      "loops": 0,
+      "branches": 0
+    },
+    {
+      "name": "plot_statistic_cusum",
+      "start_line": 459,
+      "end_line": 473,
+      "length": 15,
+      "loops": 0,
+      "branches": 0
+    },
+    {
+      "name": "Evaluating_trading_rule",
+      "start_line": 478,
+      "end_line": 510,
+      "length": 33,
+      "loops": 2,
+      "branches": 4
+    },
+    {
+      "name": "Jensen_Alpha",
+      "start_line": 517,
+      "end_line": 561,
+      "length": 45,
+      "loops": 0,
+      "branches": 0
+    },
+    {
+      "name": "geom_average_retrun",
+      "start_line": 567,
+      "end_line": 577,
+      "length": 11,
+      "loops": 0,
+      "branches": 0
+    },
+    {
+      "name": "sharp",
+      "start_line": 580,
+      "end_line": 608,
+      "length": 29,
+      "loops": 0,
+      "branches": 0
+    },
+    {
+      "name": "buy_hold",
+      "start_line": 611,
+      "end_line": 618,
+      "length": 8,
+      "loops": 0,
+      "branches": 0
+    }
+  ],
+  "loop_count": 5,
+  "branch_count": 6
+}

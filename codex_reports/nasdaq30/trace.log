@@ -1,0 +1,5 @@
+2025-09-15T17:00Z apt-get update (partial, proxy-limited) – success with warnings
+2025-09-15T17:01Z apt-get install r-base – installed R 4.3.3
+2025-09-15T17:02Z Attempted install.packages for thesis dependencies – failed (403 proxy)
+2025-09-15T17:03Z Attempted sudo apt-get install r-cran-* – aborted due to 800+ package pull
+2025-09-15T17:05Z Rscript experiments/nasdaq30/nasdaq30_run.R – executed with static ticker fallback, metrics not computed (missing packages)
